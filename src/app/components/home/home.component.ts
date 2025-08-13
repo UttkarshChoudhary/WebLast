@@ -6,22 +6,9 @@ import { Observable } from 'rxjs';
   selector: 'app-home',
   template: `
     <div class="home-container">
-      <h1>Welcome to Todo App</h1>
+      <h1>Welcome to Sticky Notes</h1>
 
-      <div class="todo-section">
-        <h2>Your Todos</h2>
-        <div class="todo-list">
-          <div *ngFor="let todo of todos$ | async" class="todo-item">
-            <input 
-              type="checkbox" 
-              [checked]="todo.completed"
-              (change)="toggleTodo(todo.id)"
-            >
-            <span [class.completed]="todo.completed">{{ todo.title }}</span>
-            <button class="delete-btn" (click)="deleteTodo(todo.id)">Delete</button>
-          </div>
-        </div>
-      </div>
+      
     </div>
   `,
   styles: [`
